@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String appTitle = 'Los lugares mas visitados';
+    const String appTitle = 'Mis 5 lugares visitados';
     return MaterialApp(
       title: appTitle,
       home: Scaffold(
@@ -17,25 +17,50 @@ class MyApp extends StatelessWidget {
         body: const SingleChildScrollView(
           child: Column(
             children: [
+              ImageSection(
+                image: 'images/bahia.jpg',
+              ),
               TitleSection(
-                  name: 'Oeschien Lake Campground',
-                  location: 'Kandersteg, Switzerland'),
-                  ImageSection(image: 'images/image1.jpg',),
+                  name: 'Bahia de Caraquez',
+                  location: 'Bahia de Caraquez, Ecuador'),
               ButtonSection(),
-              TextSection(description: "Descripción de lugar Switzerland xd"),
-              TitleSection(name: 'El panecillo', location: 'Quito, Ecuador'),
-              ImageSection(image: 'images/neco.jpg',),
+              TextSection(
+                  description:
+                      "Bahía de Caráquez es una ciudad costera en Ecuador, famosa por su arquitectura colonial, playas extensas y ambiente tranquilo. Es un destino ideal para quienes buscan disfrutar de la naturaleza y la historia, con oportunidades para practicar deportes acuáticos y explorar sitios arqueológicos."),
+              ImageSection(
+                image: 'images/los-bancos.jpg',
+              ),
+              TitleSection(
+                  name: 'San Miguel de los Bancos',
+                  location: 'San Miguel de los Bancos, Ecuador'),
               ButtonSection(),
-              TextSection(description: "Descripción del Panecillo"),
-              TitleSection(name: 'Tu gfa', location: 'Quito, Ecuador'),
+              TextSection(
+                  description:
+                      "San Miguel de los Bancos es una ciudad encantadora en la región de Pichincha, Ecuador. Rodeada de bosques nubosos y ríos, es conocida por su biodiversidad y paisajes impresionantes. Es un lugar perfecto para los amantes de la naturaleza y la aventura, con actividades como senderismo, observación de aves y rafting."),
+              ImageSection(
+                image: 'images/canoa.jpg',
+              ),
+              TitleSection(name: 'Canoa', location: 'Canoa, Ecuador'),
               ButtonSection(),
-              TextSection(description: "Descripción de tu gfa"),
-              TitleSection(name: 'Tu ñaña', location: 'Quito, Ecuador'),
+              TextSection(
+                  description:
+                      "Canoa es una pequeña ciudad costera ubicada en la provincia de Manabí, Ecuador. Con sus largas playas de arena blanca y olas perfectas para el surf, es un destino popular tanto para turistas nacionales como internacionales. Además de sus playas, Canoa ofrece una vibrante vida nocturna y una comunidad acogedora."),
+              ImageSection(
+                image: 'images/esmeraldas.jpg',
+              ),
+              TitleSection(name: 'Esmeraldas', location: 'Esmeraldas, Ecuador'),
               ButtonSection(),
-              TextSection(description: "Descripción de tu ñaña"),
-              TitleSection(name: 'El Ejido', location: 'Quito, Ecuador'),
+              TextSection(
+                  description:
+                      "Esmeraldas es una ciudad portuaria en la costa norte de Ecuador, conocida por sus hermosas playas, cultura afroecuatoriana y su vibrante escena musical. La ciudad ofrece una mezcla única de tradición y modernidad, con festivales coloridos, deliciosos mariscos y una rica historia cultural."),
+              ImageSection(
+                image: 'images/atacames.jpg',
+              ),
+              TitleSection(name: 'Atacames', location: 'Atacames, Ecuador'),
               ButtonSection(),
-              TextSection(description: "Descripción del Ejido"),
+              TextSection(
+                  description:
+                      "Atacames es una ciudad costera ubicada en la provincia de Esmeraldas, Ecuador. Es famosa por sus playas extensas de arena dorada y su animada vida nocturna. Los visitantes pueden disfrutar de una variedad de deportes acuáticos, como el surf y el esquí acuático, así como de una vibrante oferta gastronómica con mariscos frescos y especialidades locales."),
             ],
           ),
         ),
@@ -83,10 +108,10 @@ class TitleSection extends StatelessWidget {
             ),
           ),
           Icon(
-            Icons.account_tree_rounded,
+            Icons.star_border_outlined,
             color: Colors.red[900],
           ),
-          const Text('5'),
+          const Text('10'),
         ],
       ),
     );
@@ -167,7 +192,7 @@ class TextSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(5),
+      padding: const EdgeInsets.all(32),
       child: Text(
         description,
         softWrap: true,
