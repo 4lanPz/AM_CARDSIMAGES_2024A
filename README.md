@@ -1,6 +1,9 @@
-# app_cards
+# APP Cards Layout
+```bash
+flutter pub get
+```
+![Imagen](https://github.com/4lanPz/AM_CARDSIMAGES_2024A/assets/117743495/3c415594-e79b-4e91-8ca9-2b9ad5cda4db)
 
-A new Flutter project.
 
 ## Getting Started
 
